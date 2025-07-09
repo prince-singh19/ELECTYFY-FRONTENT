@@ -58,7 +58,9 @@ const updateElection = async (e) => {
     const electionData = new FormData();
     electionData.set('title', title);
     electionData.set('description', description);
-    electionData.set('thumbnail', thumbnail);
+    if (thumbnail) {
+  electionData.set('thumbnail', thumbnail);
+}
 
     const response = await axios.patch(
       `${process.env.REACT_APP_API_URL}/elections/${idOfElectionToUpdate}`,
