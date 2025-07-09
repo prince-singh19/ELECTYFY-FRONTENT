@@ -21,7 +21,7 @@ const registerVoter = async (e) =>{
   e.preventDefault();
   try {
     await axios.post(`${process.env.REACT_APP_API_URL}/voters/register`,userData)
-    navigate('/')
+    navigate('/results')
   } catch (error) {
     setError(error.response.data.message)
   }
