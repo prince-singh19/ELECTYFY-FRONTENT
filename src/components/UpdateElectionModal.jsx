@@ -100,7 +100,8 @@ const updateElection = async (e) => {
           </div>
            <div>
             <h6>Election Thumbnail:</h6>
-            <input type="file"  name="thumbnail"  onChange={e => setThumbnail(e.target.files[0])} accept='png, jpg, jpeg, webp, avif'/>
+            <input type="file"  name="thumbnail"  onChange={e => setThumbnail(e.target.files[0])} accept="image/png, image/jpg, image/jpeg, image/webp, image/avif"
+/>
           </div>
 
           <button type='submit' className='btn primary'>Update Election</button>
